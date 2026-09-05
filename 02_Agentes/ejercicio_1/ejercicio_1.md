@@ -1,11 +1,11 @@
 # Ejercicio 1 — Cambiar la ubicación del Wumpus y los pits
 
- 4 | .  P  .  . 
- 3 | P  .  W  . 
- 2 | .  .  .  G 
- 1 | >  .  .  P 
-    -----------
-     1  2  3  4
+``` 4 | .  P  .  . ```
+``` 3 | P  .  W  . ```
+``` 2 | .  .  .  G ```
+``` 1 | >  .  .  P ```
+```    ----------- ```
+```    1  2  3  4 ```
 
 Tras ejecutar el código utilizando esta nueva configuración del mundo de Wumpus obtuve resultados algo diferentes que utilizando el mapa clásico. El agente de simple reflex no logro conseguir el oro, al igual que en el original, y se quedo atorado en la casilla [3,1] dando vueltas. Los agentes model based y goal based, a diferencia de con el mapa clásico, no lograron llegar al oro, quedándose atorados en la casilla [3,2], dando vueltas de manera similar al agente simple reflex. El agente utility based si logró salir con el oro y le tomo 27 pasos, mientras que el learning agent lo hizo en tan solo 16 pasos.
 
@@ -13,12 +13,12 @@ Como se puede observar, el agente de simple reflex falló en ambos casos, quedá
 
 Para comprobar que como cambia el resultado del agente model based, modifique el mapa clásico (ya que en este el agente si logra salir con el oro) de la siguiente manera:
 
- 4 | .  .  .  P  	4 | .  .  .  P
- 3 | W  G  P  . 	3 | W  G  P  .
- 2 | .  .  .  . 	2 | .  .  .  .
- 1 | >  P  .  . 	1 | >  .  .  P
-    -----------  	   -----------
-     1  2  3  4		    1  2  3  4
+``` 4 | .  .  .  P  	4 | .  .  .  P ```
+``` 3 | W  G  P  . 	3 | W  G  P  . ```
+``` 2 | .  .  .  . 	2 | .  .  .  . ```
+``` 1 | >  P  .  . 	1 | >  .  .  P ```
+```    -----------  	   -----------```
+```     1  2  3  4		    1  2  3  4 ```
 
 
 En el caso del primer mapa, el agente model based se queda atorado en la primera casilla dando vueltas. Esto se debe a que al no tener alguna casilla segura a la cual regresar (ya que es la casilla inicial) el agente no sabe hacia donde puede ir y simplemente gira sin poder avanzar en ninguna dirección, por lo que simplemente se termina el numero de pasos permitidos sin que la flecha se mueva del inicio.
