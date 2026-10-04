@@ -1,0 +1,5 @@
+*.env
+chroma/
+*.lock
+*.toml
+__pycache__/
