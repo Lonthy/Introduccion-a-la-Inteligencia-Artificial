@@ -93,7 +93,7 @@ uvicorn main:app --reload
 Abre una **segunda terminal**, activa el `.venv` y ejecuta:
 
 ```
-streamlit run app.py
+streamlit run streamlit_app.py
 
 ```
 
